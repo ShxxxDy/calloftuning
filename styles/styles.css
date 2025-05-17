@@ -4,10 +4,24 @@
     box-sizing: border-box;
 }
 
+:where(*) {
+    font-family: "Montserrat", sans-serif;
+}
+
+
 body {
     font-size: 16px;
-    font-family: "Montserrat", sans-serif;
     color: black;
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Audiowide", sans-serif;
 }
 
 nav {
@@ -21,17 +35,8 @@ nav {
 }
 
 .logo {
-    width: 50px;
+    width: 60px;
     padding-left: 1rem;
-}
-
-.logo_scritta {
-    font-family: "Audiowide", sans-serif;
-}
-
-.logo_scritta a{
-    text-decoration: none;
-    color: initial;
 }
 
 .hamburger {
@@ -41,20 +46,10 @@ nav {
 nav i {
     justify-content: flex-end;
     padding-right: 1rem;
+    font-size: 1.5rem;
 }
 
-.hero {
-    width: 100%;
-    overflow: hidden;
-    position: relative;
-    border-bottom: 1px solid black;
-    padding-bottom: 4rem;
-}
-
-.hero img {
-    width: 100%;
-    object-fit: cover;
-}
+/* MENU A TENDINA */
 
 .nav-menu {
     width: 100%;
@@ -64,7 +59,8 @@ nav i {
     align-items: center;
     padding: 1rem 0;
     position: absolute;
-    top: 100%; /* posizionato subito sotto la navbar */
+    top: 100%;
+    /* posizionato subito sotto la navbar */
     left: 0;
     z-index: 0;
 }
@@ -79,30 +75,63 @@ nav i {
     gap: 1rem;
 }
 
-.nav-menu ul li {
-    list-style-type: none;
-}
-
 .nav-menu ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
 }
 
-.nav-menu ul li a:hover {
-    text-decoration: underline;
-}
-
 nav.active {
     background-color: black;
 }
 
+.nav-menu ul li {
+    list-style-type: none;
+}
+
+.nav-menu ul li a:hover {
+    text-decoration: underline;
+}
 
 nav.scrolled .bi {
     color: black !important;
     transition: color 0.3s ease;
 }
 
+
+/* HERO SECTION */
+
+.hero {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* SCRITTA CENTRALE */
+
+.logo_scritta {
+    position: absolute;
+    bottom: 10%;
+    left: 80%;  
+    color: black;
+    z-index: 1;
+}
+
+.logo_scritta a {
+    text-decoration: none;
+    color: initial;
+}
+
+.logo_scritta h1 {
+    font-size: 1.2rem;
+    font-family: "Audiowide", sans-serif;
+}
 
 .invisible {
     display: none;
@@ -117,13 +146,13 @@ nav.scrolled .bi {
 
 .chi_siamo h2 {
     text-align: center;
-    margin: 4rem 0 3rem 0;
+    margin: 3rem 0 3rem 0;
 }
 
 .chi_siamo_img {
     display: flex;
     justify-content: center;
-    margin: 1rem 0;
+    margin: 0 0 2rem 0;
 }
 
 .chi_siamo_img img {
@@ -151,7 +180,7 @@ nav.scrolled .bi {
 
 .section_la_nostra_famiglia h2 {
     text-align: center;
-    margin: 4rem 0 3rem 0;
+    margin: 4rem 0 4rem 0;
 }
 
 .slider {
@@ -176,7 +205,8 @@ nav.scrolled .bi {
     display: block;
 }
 
-#next, #prev {
+#next,
+#prev {
     border: none;
     padding: 0.2rem;
     color: white;
@@ -192,11 +222,7 @@ nav.scrolled .bi {
     right: 10px;
 }
 
-/*DIVENTA SOCIO*/ 
-
-.section_diventa_socio {
-    padding-bottom: 2rem;
-}
+/*DIVENTA SOCIO*/
 
 /*ARTICOLI*/
 
@@ -232,34 +258,38 @@ footer {
     border-top: 1px solid black;
 }
 
- .footer_container {
+.footer_container {
+    padding: 2rem 1rem;
+}
+
+.link_utili {
     display: flex;
     justify-content: space-between;
-    padding: 2rem 1rem;
- }
+    padding-bottom: 2rem;
+}
 
- .footer_container ul {
+.footer_container ul {
     padding: 0;
     margin: 0;
- }
+}
 
- .footer_container ul li {
-    list-style-type:none;
+.footer_container ul li {
+    list-style-type: none;
     padding: 0;
     margin: 0;
- }
+}
 
- .footer_container ul li:hover {
+.footer_container ul li:hover {
     text-decoration: underline;
     cursor: pointer;
- }
+}
 
- .footer_container a {
+.footer_container a {
     text-decoration: none;
     color: initial;
- }
+}
 
- .footer_bottom {
+.footer_bottom {
     display: flex;
     justify-content: space-between;
     background-color: black;
@@ -267,18 +297,20 @@ footer {
     font-weight: bold;
     font-size: 0.7rem;
     padding: 0 0.2rem;
- }
+}
 
-.contatti_social{
+.contatti_social {
     color: initial;
     padding-left: 0.5rem;
 }
- .footer_bottom a {
+
+.footer_bottom a {
     text-decoration: none;
     color: white;
     cursor: pointer;
- }
+}
 
- .footer_bottom a:hover {
+.footer_bottom a:hover {
     text-decoration: underline;
- }
+
+}
